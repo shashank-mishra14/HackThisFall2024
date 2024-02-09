@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://utkarshhdixit:nXPmhBvjeo60ieQ9@cluster0.plsuptg.mongodb.net/?retryWrites=true&w=majority");
 
 const userSchema = new mongoose.Schema({
   profession: String,
