@@ -53,4 +53,40 @@
              </a>
     </div>
 </div>
-    
+<script>
+    document.getElementById('getLocationButton').addEventListener('click', () => {
+        // Call a function to get the user's location
+        getUserLocation();
+    });
+</script>
+<script>
+   
+    function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            // Handle the user's location
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+
+            // Send location data to the server
+            fetch(`/save-location?lat=${lat}&lng=${lng}`, {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Location saved:', data);
+            })
+            .catch(error => {
+                console.error('Error saving location:', error.message);
+            });
+        }, (error) => {
+            console.error('Error getting user location:', error.message);
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+    }
+}
+</script>
+
+</body>
+</html>
