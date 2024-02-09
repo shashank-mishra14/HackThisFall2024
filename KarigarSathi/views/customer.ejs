@@ -42,3 +42,26 @@
         </div>
       <% } %>
     <% }) %>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var searchValue = this.value.toLowerCase();
+            var kaarigars = document.querySelectorAll('.kaarigar');
+    
+            kaarigars.forEach(function(kaarigar) {
+                var professionElement = kaarigar.querySelector('.details-container h5 span');
+                
+                // Check if the profession element exists before trying to access its text content
+                if (professionElement) {
+                    var profession = professionElement.innerText.toLowerCase();
+                    if (profession.includes(searchValue)) {
+                        kaarigar.style.display = 'block';
+                    } else {
+                        kaarigar.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+  </body>
+  </html>
