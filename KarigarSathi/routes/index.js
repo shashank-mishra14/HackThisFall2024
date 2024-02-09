@@ -16,7 +16,7 @@ router.get("/login", function (req, res, next) {
 router.post('/login',passport.authenticate("local", {
   successRedirect: "/profile",
   failureRedirect: "/signup",
-  failureFlash: true
+  // failureFlash: true
 }), function(req, res){});
 
 
@@ -70,6 +70,10 @@ router.get("/logout", function(req, res){
 
 router.get("/profile", function (req, res, next) {
   res.render("profile");
+});
+
+router.get("/details", function (req, res, next) {
+  res.render("details");
 });
 
 router.get("/kaarigar", function (req, res, next) {
