@@ -1,22 +1,24 @@
-const mongoose = require('mongoose');
-
+const mongoose = require("mongoose");
+mongoose.connect(
+  "mongodb+srv://utkarshhdixit:nXPmhBvjeo60ieQ9@cluster0.plsuptg.mongodb.net/?retryWrites=true&w=majority"
+);
 
 const userSchema = new mongoose.Schema({
   profession: String,
   selectedOption: String,
   mobile: {
     type: Number,
-    required: true
+    required: true,
   },
   name: {
-    type: String
-  }, 
+    type: String,
+  },
   username: {
     type: String,
     unique: true,
   },
   locationName: {
-    type: String
+    type: String,
   },
   lat: Number,
   long: Number,
@@ -34,4 +36,3 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("User", userSchema);
-
