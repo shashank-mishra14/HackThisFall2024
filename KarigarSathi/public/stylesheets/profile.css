@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: aqua;
+  }
+  
+  .pro {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .home:hover{
+     background-color: aqua;
+     padding: 3px 10px;
+     font-weight: bolder;
+     font-size: large;
+  }
+  
+  .about:hover{
+    background-color: aqua;
+    font-size: large;
+    font-weight: bolder;
+    padding: 3px 10px;
+  }
+  
+  .navbar {
+    background-color: wheat;
+    color: black;
+    padding: 2px;
+    border: 2px solid brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow the navbar to wrap on smaller screens */
+  }
+  
+  .nav-logo img {
+    max-height: 40px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px;
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+  
+  .nav-login-cart a, .nav-menu li a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .logoutBut {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logoutBut:hover{
+    background-color: darkred;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    border: none;
+  }
+  
+  /* .KaarigarBut{
+    margin-top: 70px;
+  } */
+  /* 
+  .logoutBut:hover{
+    margin: 100px;
+  } */
+  
+  /* Adjustments for smaller screens */
+  @media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .nav-menu, .nav-login-cart {
+        margin-top: 5px;
+    }
+  
+    .nav-menu li, .nav-login-cart a {
+        margin-right: 10px;
+    }
+  
+    .logoutBut {
+        margin-top: 5px;
+    }
+  }
+  
+  
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+    padding: 10px 0; /* Added padding for spacing */
+  }
+  
+  .bottom a:hover{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+  
+  .bottom span{
+     border: 2px solid black;
+     padding: 0 20px;
+     border-radius: 15px;
+     font-size: 35px;
+     background-color: rgb(48, 223, 223);
+     color: black;
+  }
+  
+  span:hover{
+    background-color: rgb(194, 184, 43);
+    font-weight: 700;
+  }
+  .image-container:hover{
+    background-color: rgb(194, 184, 43);
+    font-weight: 700;
+  }
+  
+  .image-container {
+    width: 30%;
+    margin: 0 10%; /* Adjusted for centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%; /* Changed to width: 100% for consistency */
+    height: auto;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  
+  
+  
+  .heading {
+    max-width: 50%;
+    font-size: 18px;
+    padding: 0 10%;
+  }
+  
+  .image-containerone {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .image-containerone img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .heading, .image-containerone {
+        max-width: 100%;
+    }
+  
+    .bottom {
+        flex-direction: column;
+    }
+  
+    .image-container {
+        width: 80%; /* Adjusted for mobile layout */
+        margin: 10px 0; /* Adjusted margin for vertical layout */
+    }
+  }
+  
