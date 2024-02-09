@@ -3,6 +3,7 @@ var router = express.Router();
 const passport = require('passport');
 const Session = require('express-session');
 const userModel = require('./users');
+const axios = require('axios');
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -20,6 +21,36 @@ router.post('/login',passport.authenticate("local", {
   // failureFlash: true
 }), function(req, res){});
 
+
+router.post('/save-location', async (req, res) => {
+  const { lat, lng } = req.query;
+  
+  console.log(lat);
+  console.log(lng);
+
+  try {
+    // Make a request to OpenStreetMap Nominatim API
+    const response = await axios.get('https://nominatim.openstreetmap.org/reverse', {
+        params: {
+            lat: parseFloat(lat),
+            lon: parseFloat(lng),
+            format: 'json',
+            addressdetails: 1,
+        },
+    });
+
+    // Extract the address or location name from the API response
+    const locationName = response.data.display_name;
+    console.log(locationName);
+    const user = await userModel.findOneAndUpdate({username: req.session.passport.user}, {locationName: locationName, lat: lat, long: lng}, {new: true});
+    await user.save();
+    console.log(user);
+    res.render('profile');
+} catch (error) {
+    console.error('Error converting coordinates to location name:', error.message);
+    res.status(500).json({ error: 'Error converting coordinates to location name' });
+}
+});
 
 router.post('/register', async function(req, res) {
   const { selectedOption, mobile, username, email, name, locationName, profession } = req.body;
