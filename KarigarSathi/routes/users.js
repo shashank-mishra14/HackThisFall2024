@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 const plm = require('passport-local-mongoose');
 
-mongoose.connect("mongodb+srv://karigarhtf:Fl96fWL659Jobb43@cluster0.i7zhlid.mongodb.net/");
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const userSchema = new mongoose.Schema({
   profession: String,
