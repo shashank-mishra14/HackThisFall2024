@@ -1,7 +1,8 @@
 var express = require("express");
 var router = express.Router();
-const userModel = require('./users');
 const passport = require('passport');
+const Session = require('express-session');
+const userModel = require('./users');
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -72,9 +73,24 @@ router.get("/profile", function (req, res, next) {
   res.render("profile");
 });
 
-router.get("/details", function (req, res, next) {
-  res.render("details");
+router.get("/details", async function (req, res, next) {
+  const user = await userModel.findOne({username: req.session.passport.user});
+  res.render('details', {user});
 });
+
+router.post('/editdetails', async function(req, res){
+  const user = await userModel.findOneAndUpdate(
+    {username: req.session.passport.user},
+     {mobile: req.body.mobile,
+    name: req.body.name,
+     email: req.body.email,
+locationName: req.body.locationName,
+username: req.body.username},
+      {new: true});
+      await user.save();
+      res.redirect('profile');
+})
+
 
 router.get("/kaarigar", function (req, res, next) {
   res.render("kaarigar");
