@@ -9,17 +9,17 @@ const userSchema = new mongoose.Schema({
   selectedOption: String,
   mobile: {
     type: Number,
-    required: true
+    required: true,
   },
   name: {
-    type: String
-  }, 
+    type: String,
+  },
   username: {
     type: String,
     unique: true,
   },
   locationName: {
-    type: String
+    type: String,
   },
   lat: Number,
   long: Number,
@@ -39,4 +39,3 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(plm);
 
 module.exports = mongoose.model("User", userSchema);
-
