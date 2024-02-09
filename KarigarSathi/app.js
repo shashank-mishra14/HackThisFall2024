@@ -7,6 +7,7 @@ const passport = require('passport');
 var Session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var flash = require('connect-flash');
 
 var app = express();
 
@@ -20,6 +21,8 @@ passport.use(new localStrategy(usersRouter.authenticate()));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(flash());
 
 app.use(Session({
   resave: false,

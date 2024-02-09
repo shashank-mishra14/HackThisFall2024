@@ -4,6 +4,7 @@ const passport = require('passport');
 const Session = require('express-session');
 const userModel = require('./users');
 const axios = require('axios');
+var flash = require('connect-flash');
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -127,8 +128,11 @@ router.get("/kaarigar", function (req, res, next) {
   res.render("kaarigar");
 });
 
-router.get("/customer", function (req, res, next) {
-  res.render("customer");
+router.get("/customer", async function (req, res, next) {
+  const successMessage = req.flash('success')[0];
+
+  const users = await userModel.find();
+  res.render('customer', {users, successMessage});
 });
 
 router.get("/signup", function (req, res, next) {
