@@ -61,6 +61,13 @@ router.post('/register', async function(req, res) {
       });
 });
 
+router.get("/logout", function(req, res){
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/login');
+  });
+});
+
 router.get("/profile", function (req, res, next) {
   res.render("profile");
 });
