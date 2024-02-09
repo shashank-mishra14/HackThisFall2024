@@ -10,6 +10,10 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
+router.get('/profile', function(req, res, next) {
+  res.render('profile');
+});
+
 router.get('/signup', function(req, res, next) {
   res.render('signup', {error: ""});
 });
