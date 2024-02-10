@@ -107,20 +107,29 @@ html, body {
   }
   
   
-  .bottom {
+  .customer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
     padding: 10px 0; /* Added padding for spacing */
+    max-width: 100%;
   }
   
-  /* .bottom a:hover{
+  .kaarigar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+    padding: 10px 0; /* Added padding for spacing */
+    max-width: 80%;
+  }
+  /* .customer a:hover{
     border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-customer: 3px solid black;
   } */
   
-  .bottom span{
+  .customer span{
      border: 2px solid black;
      padding: 0 20px;
      border-radius: 15px;
@@ -128,15 +137,28 @@ html, body {
      background-color: rgb(48, 223, 223);
      color: black;
   }
-  
+
+  .kaarigar span{
+    border: 2px solid black;
+    padding: 0 20px;
+    border-radius: 15px;
+    font-size: 35px;
+    background-color: rgb(48, 223, 223);
+    color: black;
+ }
+  .imagebox{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
   span:hover{
     background-color: rgb(194, 184, 43);
     font-weight: 700;
   }
-  .image-container:hover{
+  /* .image-container:hover{
     background-color: rgb(194, 184, 43);
     font-weight: 700;
-  }
+  } */
   
   .image-container {
     width: 30%;
@@ -173,7 +195,7 @@ html, body {
   }
   
   .image-containerone img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
   }
   
@@ -189,8 +211,12 @@ html, body {
         max-width: 100%;
     }
   
-    .bottom {
+    .customer {
         flex-direction: column;
+    }
+
+    .kaarigar{
+      flex-direction: column;
     }
   
     .image-container {
