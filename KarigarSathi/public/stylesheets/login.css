@@ -1,71 +1,77 @@
-body{
-    background: rgb(95,29,103);
-background: linear-gradient(90deg, rgba(95,29,103,1) 0%, rgba(231,211,244,1) 81%);
+body {
+  background: rgb(12, 83, 30);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 83, 30, 1) 0%,
+    rgba(189, 233, 200, 1) 74%
+  );
 }
-.form{  
-    background-color: linear-gradient(to right, rgb(228, 94, 240), rgb(248, 248, 248));;
-    min-width: 100px;
-    max-width: 500px;
-    height: auto;
-    margin: auto;
-    justify-content: center;
-    font-size: large;
+.form {
+  background: rgb(12, 83, 30);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 83, 30, 1) 0%,
+    rgba(189, 233, 200, 1) 74%
+  );
+  min-width: 100px;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  font-size: large;
 }
 
-.LoginPa{
-    text-align: center;
+.LoginPa {
+  text-align: center;
 }
 
 /* .form:hover{
     background-color: rgb(0, 240, 240);
 } */
-.div1{
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    
-    display: flex;
-    flex-direction: column;
+.div1 {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
 }
-    
-.Head{
-    font-size: 60px;
-    /* background: linear-gradient(to right, yellow, rgb(252, 252, 210)); */
-    font-family: 'Times New Roman', Times, serif;
-    /* text-shadow: 2px 2px; */
-    color: rgb(43, 38, 38) !important;
-    
+
+.Head {
+  font-size: 60px;
+  /* background: linear-gradient(to right, yellow, rgb(252, 252, 210)); */
+  font-family: "Times New Roman", Times, serif;
+  /* text-shadow: 2px 2px; */
+  color: rgb(43, 38, 38) !important;
 }
 /*  
 option{
     color: black;
 } */
 
-.user{
-    margin: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
-    /* background-color: white; */
+.user {
+  margin: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  /* background-color: white; */
 }
 
-.change{
-border-bottom: 2px solid black;
-width: 10vmax;
-font-size: 1.1vmax;
-color: rgb(59, 58, 58);
-font-weight: 100;
-border: 1px black;
-text-decoration: underline;
-
+.change {
+  border-bottom: 2px solid black;
+  width: 10vmax;
+  font-size: 1.1vmax;
+  color: rgb(59, 58, 58);
+  font-weight: 100;
+  border: 1px black;
+  text-decoration: underline;
 }
 
-
-.form>button{
-    font-size: large;
-    color: black;
+.form > button {
+  font-size: large;
+  color: black;
 }
 
-.form>button:hover{
-    background-color: #e7d3f4;
+.form > button:hover {
+  background-color: #e7d3f4;
 }

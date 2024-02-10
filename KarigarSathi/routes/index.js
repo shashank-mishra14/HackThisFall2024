@@ -47,8 +47,39 @@ router.post('/post-requirement', async (req, res) => {
   }
 });
 
+// router.post('/post-requirement', async (req, res) => {
+//   try {
+//     const { kaarigarType, description } = req.body;
+//     const createdAt = new Date();
+//     const expiresAt = new Date(createdAt.getTime() + (48 * 60 * 60 * 1000)); // 48 hours from now
+
+//     // Assuming req.user._id is available in the session
+//     const requestData = {
+//       User: req.user._id,
+//       kaarigarType,
+//       description,
+//       createdAt,
+//       expiresAt
+//     };
+
+//     // Make a POST request to the external API
+//     const response = await axios.post('https://ap-south-1.aws.neurelo.com/rest/Requirement/__one', requestData);
+
+//     // Check if the request was successful
+//     if (response.status === 200) {
+//       req.flash('success', 'Requirements posted successfully.');
+//       res.redirect('/customer'); // Redirect after successful posting
+//     } else {
+//       throw new Error('Failed to post requirements');
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send('Error posting requirement');
+//   }
+// });
+
 router.post('/login',passport.authenticate("local", {
-  successRedirect: "/profile",
+  successRedirect: "/profile",  
   failureRedirect: "/",
   // failureFlash: true
 }), function(req, res){});
