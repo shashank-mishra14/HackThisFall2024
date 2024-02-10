@@ -18,6 +18,11 @@ router.get("/requirement", function(req, res, next){
   res.render("requirement");
 })
 
+router.get('/kaarigar', async function(req, res, next) {
+  const requirements = await Requirement.find().populate("User");
+  console.log(requirements);
+  res.render('kaarigar', {requirements});
+});
 
 router.post('/post-requirement', async (req, res) => {
   try {
@@ -148,11 +153,6 @@ username: req.body.username},
       await user.save();
       res.redirect('profile');
 })
-
-
-router.get("/kaarigar", function (req, res, next) {
-  res.render("kaarigar");
-});
 
 router.get("/customer", async function (req, res, next) {
   const successMessage = req.flash('success')[0];
