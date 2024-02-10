@@ -115,10 +115,10 @@ html, body {
     padding: 10px 0; /* Added padding for spacing */
   }
   
-  .bottom a:hover{
+  /* .bottom a:hover{
     border-top: 3px solid black;
     border-bottom: 3px solid black;
-  }
+  } */
   
   .bottom span{
      border: 2px solid black;
