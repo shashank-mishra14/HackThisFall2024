@@ -23,7 +23,7 @@
     <input type="text" id="searchInput" class="search-bar" value="" placeholder="Search by profession">
 
     <% users.forEach(function(elem){ %>
-      <% if(elem.selectedOption === 'vendor'){ %>
+      <% if(elem.selectedOption === 'vendor' && elem.profession){ %>
         <!-- Add a class based on profession for filtering -->
         <div class="kaarigar <%= elem.profession.toLowerCase() %>">
             <div class="image-container">
