@@ -2,7 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: aqua;
+    background: rgb(95,29,103);
+background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
   }
   
   .pro {
@@ -12,14 +13,16 @@ html, body {
   }
   
   .home:hover{
-     background-color: aqua;
+    background: rgb(95,29,103);
+    background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
      padding: 3px 10px;
      font-weight: bolder;
      font-size: large;
   }
   
   .about:hover{
-    background-color: aqua;
+    background: rgb(95,29,103);
+background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
     font-size: large;
     font-weight: bolder;
     padding: 3px 10px;
@@ -134,7 +137,7 @@ html, body {
      padding: 0 20px;
      border-radius: 15px;
      font-size: 35px;
-     background-color: rgb(48, 223, 223);
+     background-color: #5f1d67;
      color: black;
   }
 
@@ -143,16 +146,17 @@ html, body {
     padding: 0 20px;
     border-radius: 15px;
     font-size: 35px;
-    background-color: rgb(48, 223, 223);
+    background-color: #5f1d67;
     color: black;
- }
+  }
+
   .imagebox{
     display: flex;
     justify-content: center;
     flex-direction: row;
   }
   span:hover{
-    background-color: rgb(194, 184, 43);
+    background-color: #e7d3f4;
     font-weight: 700;
   }
   /* .image-container:hover{
