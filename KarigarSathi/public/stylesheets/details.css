@@ -9,7 +9,12 @@ form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: aqua;
+    background: rgb(95, 29, 103);
+  background: radial-gradient(
+    circle,
+    rgba(95, 29, 103, 1) 2%,
+    rgba(231, 211, 244, 1) 100%
+  );
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

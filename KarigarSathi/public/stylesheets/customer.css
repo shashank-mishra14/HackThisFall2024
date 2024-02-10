@@ -1,68 +1,79 @@
 body {
-    background-color: aqua;
-  }
-  
-  /* Add a class for the search bar background */
-  .search-bar {
-    background-color: rgba(255, 255, 255, 0.8); /* Set the background color with alpha for blending */
-    padding: 10px;
-  }
-  
-  /* Style the search input */
-  #searchInput {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .rqrmnt{
-    font-size: larger;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .kaarigar {
-    background-color: wheat;
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-    margin-bottom: 5px;
-    justify-content: center;
-  }
-  
-  .kaarigar:hover{
-    background-color: rgb(245, 203, 125);
-  }
-  
-  .mapIm {
-    height: 120px;
-    margin-left: 20px;
-  }
-  
-  .image-container {
-    margin-right: 20px;
-    height: 120px;
-  }
-  
-  .imageKar {
-    border-radius: 50%;
-    height: 100%;
-  }
-  
-  .details-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Optional: Add some styles to improve the overall layout */
-  h3, p, h5 {
-    margin: 0;
-  }
-  
-  p {
-    margin-bottom: 10px;
-  }
-  
+  background: rgb(95, 29, 103);
+  background: radial-gradient(
+    circle,
+    rgba(95, 29, 103, 1) 2%,
+    rgba(231, 211, 244, 1) 100%
+  );
+}
+
+/* Add a class for the search bar background */
+.search-bar {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Set the background color with alpha for blending */
+  padding: 10px;
+}
+
+/* Style the search input */
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.rqrmnt {
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+
+.kaarigar {
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+
+.kaarigar:hover {
+  background-color: rgb(245, 203, 125);
+}
+
+.mapIm {
+  height: 120px;
+  margin-left: 20px;
+}
+
+.image-container {
+  margin-right: 20px;
+  height: 120px;
+}
+
+.imageKar {
+  border-radius: 50%;
+  height: 100%;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: Add some styles to improve the overall layout */
+h3,
+p,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
