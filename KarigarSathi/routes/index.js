@@ -18,7 +18,7 @@ router.get("/login", function (req, res, next) {
 
 router.post('/login',passport.authenticate("local", {
   successRedirect: "/profile",
-  failureRedirect: "/signup",
+  failureRedirect: "/",
   // failureFlash: true
 }), function(req, res){});
 
@@ -57,7 +57,7 @@ router.post('/register', async function(req, res) {
   const { selectedOption, mobile, username, email, name, locationName, profession } = req.body;
 
   if (!username || !name || !mobile || !email || !selectedOption || !locationName) {
-    return res.redirect('/signup');
+    return res.redirect('/');
   }
   let newUser;
   if(profession !== ""){
@@ -90,7 +90,7 @@ router.post('/register', async function(req, res) {
       })
       .catch((err) => {
         console.error(err);
-        res.redirect('/signup', { error: err });
+        res.redirect('/', { error: err });
       });
 });
 
@@ -135,7 +135,7 @@ router.get("/customer", async function (req, res, next) {
   res.render('customer', {users, successMessage});
 });
 
-router.get("/signup", function (req, res, next) {
+router.get("/", function (req, res, next) {
   res.render("signup", { error: "" });
 });
 
