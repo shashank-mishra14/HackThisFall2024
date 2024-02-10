@@ -3,12 +3,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: rgb(95, 29, 103);
-  background: radial-gradient(
-    circle,
-    rgba(95, 29, 103, 1) 2%,
-    rgba(231, 211, 244, 1) 100%
-  );
+  background: rgb(12,83,30);
+  background: linear-gradient(90deg, rgba(12,83,30,1) 0%, rgba(189,233,200,1) 74%);
 }
 
 .pro {
@@ -18,36 +14,22 @@ body {
 }
 
 .home:hover {
-  background: rgb(95, 29, 103);
-  background: radial-gradient(
-    circle,
-    rgba(95, 29, 103, 1) 2%,
-    rgba(231, 211, 244, 1) 100%
-  );
+  background: rgb(12,83,30);
+  
   padding: 3px 10px;
   font-weight: bolder;
   font-size: large;
 }
 
 .about:hover {
-  background: rgb(95, 29, 103);
-  background: radial-gradient(
-    circle,
-    rgba(95, 29, 103, 1) 2%,
-    rgba(231, 211, 244, 1) 100%
-  );
+  background: rgb(12,83,30);
   font-size: large;
   font-weight: bolder;
   padding: 3px 10px;
 }
 
 .navbar {
-  background: rgb(95, 29, 103);
-  background: linear-gradient(
-    90deg,
-    rgba(95, 29, 103, 1) 0%,
-    rgba(229, 213, 255, 1) 49%
-  );
+  background: rgb(12,83,30);
   color: black;
   padding: 2px;
   /* border: 1px solid gray; */
@@ -56,7 +38,7 @@ body {
   align-items: center;
   flex-wrap: wrap; /* Allow the navbar to wrap on smaller screens */
 }
-.logoname{
+.logoname {
   font-size: 42px;
 }
 .nav-logo img {
@@ -138,7 +120,7 @@ body {
   align-items: center;
   flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
   padding: 10px 0; /* Added padding for spacing */
-  max-width: 100%;
+  max-width: 130%;
 }
 
 .kaarigar {
@@ -147,7 +129,7 @@ body {
   align-items: center;
   flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
   padding: 10px 0; /* Added padding for spacing */
-  max-width: 80%;
+  max-width: 130%;
 }
 /* .customer a:hover{
     border-top: 3px solid black;
@@ -159,8 +141,8 @@ body {
   padding: 0 20px;
   border-radius: 15px;
   font-size: 35px;
-  background-color: #5f1d67;
-  color: black;
+  background-color: rgb(12,83,30);
+  color: white;
 }
 
 .kaarigar span {
@@ -168,8 +150,8 @@ body {
   padding: 0 20px;
   border-radius: 15px;
   font-size: 35px;
-  background-color: #5f1d67;
-  color: black;
+  background-color: rgb(12,83,30);
+  color: white;
 }
 
 .imagebox {
@@ -200,10 +182,9 @@ span:hover {
   height: auto;
 }
 
-.images{
+.images {
   display: flex;
   flex-direction: row;
-  
 }
 .top {
   display: flex;
@@ -218,13 +199,18 @@ span:hover {
   padding: 0 10%;
 }
 
+.heading>h1 {
+  color: white;
+}
+
+
 .image-containerone {
   width: 50%;
   padding: 20px;
 }
 
 .image-containerone img {
-  max-width: 60%;
+  max-width: 70%;
   height: auto;
 }
 
