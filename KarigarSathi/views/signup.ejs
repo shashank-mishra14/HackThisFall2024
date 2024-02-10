@@ -38,5 +38,17 @@
       </div>
   </div>
 
+  <script>
+    function toggleProfessionInput() {
+      var selectedOption = document.getElementById("selectedOption").value;
+      var professionInput = document.getElementById("professionInput");
+
+      if (selectedOption === "vendor") {
+        professionInput.style.display = "block";
+      } else {
+        professionInput.style.display = "none";
+      }
+    }
+  </script>
   </body>
 </html>
