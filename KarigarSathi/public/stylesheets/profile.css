@@ -1,231 +1,319 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: rgb(95,29,103);
-background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
-  }
-  
-  .pro {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .home:hover{
-    background: rgb(95,29,103);
-    background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
-     padding: 3px 10px;
-     font-weight: bolder;
-     font-size: large;
-  }
-  
-  .about:hover{
-    background: rgb(95,29,103);
-background: radial-gradient(circle, rgba(95,29,103,1) 2%, rgba(231,211,244,1) 100%);
-    font-size: large;
-    font-weight: bolder;
-    padding: 3px 10px;
-  }
-  
-  .navbar {
-    background-color: wheat;
-    color: black;
-    padding: 2px;
-    border: 2px solid brown;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow the navbar to wrap on smaller screens */
-  }
-  
-  .nav-logo img {
-    max-height: 40px;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-menu li {
-    margin-right: 20px;
-    padding: 3px 10px;
-    cursor: pointer;
-  }
-  
-  .nav-login-cart a, .nav-menu li a {
-    color: black;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .logoutBut {
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .logoutBut:hover{
-    background-color: darkred;
-    color: white;
-    font-size: large;
-    font-weight: bolder;
-    text-decoration: none;
-    border: none;
-  }
-  
-  /* .KaarigarBut{
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgb(95, 29, 103);
+  background: radial-gradient(
+    circle,
+    rgba(95, 29, 103, 1) 2%,
+    rgba(231, 211, 244, 1) 100%
+  );
+}
+
+.pro {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home:hover {
+  background: rgb(95, 29, 103);
+  background: radial-gradient(
+    circle,
+    rgba(95, 29, 103, 1) 2%,
+    rgba(231, 211, 244, 1) 100%
+  );
+  padding: 3px 10px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.about:hover {
+  background: rgb(95, 29, 103);
+  background: radial-gradient(
+    circle,
+    rgba(95, 29, 103, 1) 2%,
+    rgba(231, 211, 244, 1) 100%
+  );
+  font-size: large;
+  font-weight: bolder;
+  padding: 3px 10px;
+}
+
+.navbar {
+  background: rgb(95, 29, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 29, 103, 1) 0%,
+    rgba(229, 213, 255, 1) 49%
+  );
+  color: black;
+  padding: 2px;
+  /* border: 1px solid gray; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow the navbar to wrap on smaller screens */
+}
+.logoname{
+  font-size: 42px;
+}
+.nav-logo img {
+  max-height: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-right: 15px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.nav-login-cart a,
+.nav-menu li a {
+  color: black;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.logoutBut {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logoutBut:hover {
+  background-color: darkred;
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  border: none;
+}
+
+/* .KaarigarBut{
     margin-top: 70px;
   } */
-  /* 
+/* 
   .logoutBut:hover{
     margin: 100px;
   } */
-  
-  /* Adjustments for smaller screens */
-  @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .nav-menu, .nav-login-cart {
-        margin-top: 5px;
-    }
-  
-    .nav-menu li, .nav-login-cart a {
-        margin-right: 10px;
-    }
-  
-    .logoutBut {
-        margin-top: 5px;
-    }
-  }
-  
-  
-  .customer {
-    display: flex;
-    justify-content: center;
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
-    padding: 10px 0; /* Added padding for spacing */
-    max-width: 100%;
   }
-  
-  .kaarigar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
-    padding: 10px 0; /* Added padding for spacing */
-    max-width: 80%;
+
+  .nav-menu,
+  .nav-login-cart {
+    margin-top: 5px;
   }
-  /* .customer a:hover{
+
+  .nav-menu li,
+  .nav-login-cart a {
+    margin-right: 10px;
+  }
+
+  .logoutBut {
+    margin-top: 5px;
+  }
+}
+
+.customer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+  padding: 10px 0; /* Added padding for spacing */
+  max-width: 100%;
+}
+
+.kaarigar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+  padding: 10px 0; /* Added padding for spacing */
+  max-width: 80%;
+}
+/* .customer a:hover{
     border-top: 3px solid black;
     border-customer: 3px solid black;
   } */
-  
-  .customer span{
-     border: 2px solid black;
-     padding: 0 20px;
-     border-radius: 15px;
-     font-size: 35px;
-     background-color: #5f1d67;
-     color: black;
-  }
 
-  .kaarigar span{
-    border: 2px solid black;
-    padding: 0 20px;
-    border-radius: 15px;
-    font-size: 35px;
-    background-color: #5f1d67;
-    color: black;
-  }
+.customer span {
+  border: 2px solid black;
+  padding: 0 20px;
+  border-radius: 15px;
+  font-size: 35px;
+  background-color: #5f1d67;
+  color: black;
+}
 
-  .imagebox{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-  span:hover{
-    background-color: #e7d3f4;
-    font-weight: 700;
-  }
-  /* .image-container:hover{
+.kaarigar span {
+  border: 2px solid black;
+  padding: 0 20px;
+  border-radius: 15px;
+  font-size: 35px;
+  background-color: #5f1d67;
+  color: black;
+}
+
+.imagebox {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+span:hover {
+  background-color: #e7d3f4;
+  font-weight: 700;
+}
+/* .image-container:hover{
     background-color: rgb(194, 184, 43);
     font-weight: 700;
   } */
-  
-  .image-container {
-    width: 30%;
-    margin: 0 10%; /* Adjusted for centering */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-container img {
-    width: 100%; /* Changed to width: 100% for consistency */
-    height: auto;
-  }
-  
-  .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-  }
-  
-  
-  
-  .heading {
-    max-width: 50%;
-    font-size: 18px;
-    padding: 0 10%;
-  }
-  
-  .image-containerone {
-    width: 50%;
-    padding: 20px;
-  }
-  
-  .image-containerone img {
-    max-width: 60%;
-    height: auto;
-  }
-  
-  
-  
-  @media screen and (max-width: 768px) {
-    .top {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .heading, .image-containerone {
-        max-width: 100%;
-    }
-  
-    .customer {
-        flex-direction: column;
-    }
 
-    .kaarigar{
-      flex-direction: column;
-    }
+.image-container {
+  width: 30%;
+  margin: 0 10%; /* Adjusted for centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%; /* Changed to width: 100% for consistency */
+  height: auto;
+}
+
+.images{
+  display: flex;
+  flex-direction: row;
   
-    .image-container {
-        width: 80%; /* Adjusted for mobile layout */
-        margin: 10px 0; /* Adjusted margin for vertical layout */
-    }
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.heading {
+  max-width: 50%;
+  font-size: 18px;
+  padding: 0 10%;
+}
+
+.image-containerone {
+  width: 50%;
+  padding: 20px;
+}
+
+.image-containerone img {
+  max-width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .heading,
+  .image-containerone {
+    max-width: 100%;
+  }
+
+  .customer {
+    flex-direction: column;
+  }
+
+  .kaarigar {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 80%; /* Adjusted for mobile layout */
+    margin: 10px 0; /* Adjusted margin for vertical layout */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu,
+  .nav-login-cart {
+    margin-top: 5px;
+  }
+
+  .nav-menu li,
+  .nav-login-cart a {
+    margin-right: 10px;
+  }
+
+  .logoutBut {
+    margin-top: 5px;
+  }
+
+  .customer,
+  .kaarigar {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Adjusted to full width */
+  }
+
+  .customer span,
+  .kaarigar span {
+    font-size: 20px; /* Adjusted font size for smaller screens */
+    padding: 5px 15px; /* Adjusted padding */
+  }
+
+  .image-container {
+    width: 90%; /* Adjusted for mobile layout */
+    margin: 10px 0; /* Adjusted margin for vertical layout */
+  }
+
+  .image-container img {
+    width: 100%; /* Adjusted image width for mobile layout */
+    height: auto;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading {
+    max-width: 100%;
+    padding: 0 5%; /* Adjusted padding */
+    font-size: 16px; /* Adjusted font size for smaller screens */
+  }
+
+  .image-containerone {
+    width: 90%; /* Adjusted for mobile layout */
+    padding: 10px; /* Adjusted padding */
+  }
+
+  .image-containerone img {
+    max-width: 100%; /* Adjusted image width for mobile layout */
+    height: auto;
+  }
+}
