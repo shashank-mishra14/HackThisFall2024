@@ -10,7 +10,7 @@
       <form class='form' action="/register" method="post">
           <span class='Head'>Kaarigar-Sathi</span><br/><br/><br/>
           <h4>Select your profile </h4>
-          <select name="selectedOption" id="selectedOption">
+          <select name="selectedOption" id="selectedOption" onchange="toggleProfessionInput()">
               <option disabled selected>Select</option>
               <option value="vendor">Vendor</option>
               <option value="Customer">Customer</option>
