@@ -7,6 +7,7 @@ const passport = require('passport');
 var Session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var requirementsRouter = require('./routes/requirements');
 var flash = require('connect-flash');
 
 var app = express();
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/requirements', requirementsRouter);
 
 passport.use(new localStrategy(usersRouter.authenticate()));
 // catch 404 and forward to error handler

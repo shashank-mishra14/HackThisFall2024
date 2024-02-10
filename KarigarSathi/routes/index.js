@@ -3,6 +3,7 @@ var router = express.Router();
 const passport = require('passport');
 const Session = require('express-session');
 const userModel = require('./users');
+const Requirement = require('./requirements');
 const axios = require('axios');
 var flash = require('connect-flash');
 
@@ -15,6 +16,33 @@ router.get("/login", function (req, res, next) {
   res.render("login");
 });
 
+router.get("/requirement", function(req, res, next){
+  res.render("requirement");
+})
+
+
+router.post('/post-requirement', async (req, res) => {
+  try {
+      const { kaarigarType, description } = req.body;
+      const createdAt = new Date();
+      const expiresAt = new Date(createdAt.getTime() + (48 * 60 * 60 * 1000)); // 48 hours from now
+
+      const newRequirement = new Requirement({
+          User: req.user._id, // Assuming you have the user's ID from the session
+          kaarigarType,
+          description,
+          createdAt,
+          expiresAt
+      });
+
+      await newRequirement.save();
+      req.flash('success', 'Requirements posted successfully.');
+      res.redirect('/customer'); // Redirect after saving
+  } catch (err) {
+      console.error(err);
+      res.status(500).send('Error posting requirement');
+  }
+});
 
 router.post('/login',passport.authenticate("local", {
   successRedirect: "/profile",
